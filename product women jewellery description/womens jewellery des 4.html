@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <!-- title logo -->
+    <link rel="shortcut icon" type="image" href="/home/logo.png">
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Box-icon -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="women jewellery des 1.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo"><img src="/home/logo.png" alt=""></a>
+        <ul class="navmenu">
+            <li><a href="/home/home.html"><i class='bx bxs-building-house'></i><b>Home</b></a></li>
+            <li><a href="#"><b>Products<i class='bx bxs-down-arrow'></i></b></a>
+         <!--  -->
+         <ul id="submenu">
+            <li class="hover-me"><a href="#"><b>Men's Wear<i class='bx bx-caret-right' ></i></b></a>
+                <div class="sub-menu-2">
+                    <ul>
+                        <li><a href="/product men's cloth/product men's wear.html"><b>Cloth's</b></a></li>
+                        <li><a href="/product men's shoe's/product men shoe's.html"><b>Footwear</b></a></li>
+                        <li><a href="/product men's jewellery/mens jewellery .html"><b>Accessories</b></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="hover-me"><a href="#"><b>Women's Wear<i class='bx bx-caret-right' ></i></b></a>
+                <div class="sub-menu-2">
+                        <ul>
+                            <li><a href="/product women cloth/product women cloth.html"><b>Cloth's</b></a></li>
+                            <li><a href="/product women shoe's/product women shoe's.html"><b>Footwear</b></a></li>
+                            <li><a href="/product women jewellery/product women jewellery.html"><b>Accessories</b></a></li>
+                        </ul>
+                </div></li>
+            <li class="hover-me"><a href="#"><b>Kid's Wear<i class='bx bx-caret-right' ></i></b></a>
+                <div class="sub-menu-2">
+                    <ul>
+                        <li><a href="/product  kid cloth/product kid cloth.html"><b>Cloth's</b></a></li>
+                        <li><a href="/product kid shoes/product kid shoes.html"><b>Footwear</b></a></li>
+                        <li><a href="/product  kid jewellery/product kid jewellery.html"><b>Accessories</b></a></li>
+                    </ul>
+                </div></li>
+        </ul>
+    </li>
+    <li><a href="/about us/about us.html"><b>About Us</b></a></li>
+    <li><a href="/contact form/form.html"><b>Contact Us</b></a></li>
+</ul>
+<!--  -->
+
+<!--  -->
+        <div class="nav-icon">
+            <div class="box">
+                <div class="searchbox">
+                    <input type="text" placeholder="Search...">
+                        <a href="#"><i class='bx bx-search'></i></a>
+                </div>
+            </div>        
+            <a href="/login--registaor form/login.html"><i class='bx bx-user'></i></a>
+            <a href="#"><i class='bx bx-cart' ></i></a>
+
+<!-- Menu -->
+<label class="slid">
+    <input type="checkbox">
+    <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+    </div>
+
+
+    <div class="slide">
+    <h1>MENU</h1>
+    <ul>
+        <li><a href="#"><i class="fas fa-tv"></i>dashboard</a></li>
+        <li><a href="#"><i class="far fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fab fa-gripfire"></i>trending</a></li>
+        <li><a href="#"><i class="far fa-comments"></i>messages</a></li>
+        <li><a href="#"><i class="far fa-folder"></i>file manager</a></li>
+        <li><a href="#"><i class="far fa-address-book"></i>portfolio</a></li>
+        <li><a href="#"><i class="far fa-heart"></i>saved</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i>setting</a></li>
+    </ul>
+</div>    
+</label>
+</div>
+
+    </header>
+    <!-- section -->
+    <section>
+        <div class="flex-box">
+            <div class="left">
+                <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image\ 4\(1\).jpeg)">
+                <div class="big-img" id="image-container">
+                    <img src="/product women jewellery description/image 4(1).jpeg">
+                </div>
+                </figure>
+            <div class="images">
+                
+                <div class="small-img">
+                    <img src="image 4(1).jpeg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="image 4(2).jpeg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="image 4(3).jpeg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="image 4(4).jpeg" onclick="showImg(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function zoom(e){
+              var zoomer = e.currentTarget;
+              e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+              e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+              x = offsetX/zoomer.offsetWidth*100
+              y = offsetY/zoomer.offsetHeight*100
+              zoomer.style.backgroundPosition = x + '% ' + y + '%';
+            }
+            </script>
+            
+  <!-- -->
+  <div class="right">
+    <div class="url">Home >  Accessories</div>
+    <div class="pname">SHK-646-MOTIF BLACK </div>
+    <div class="ratings">
+        <i class='bx bx-star' ></i>
+        <i class='bx bx-star' ></i>
+        <i class='bx bx-star' ></i>
+        <i class='bx bx-star' ></i>
+        <i class='bx bxs-star-half'></i>
+    </div>
+    <div class="price"> RS: 3,750 only</div>
+    <div class="size">
+        <p>Size:</p>
+        <div class="psize active">8-10 Yr</div>
+        <div class="psize">11-13 Yr</div>   
+        <div class="psize">14-16 Yr</div>   
+        <div class="psize">17-20 Yr</div>   
+    </div>
+    <div class="quantity">
+        <p>Quantity:</p>
+        <input type="number" min="1" max="s" value="1">
+    </div>
+    <div class="btn-box">
+        <button class="cart-btn">Add to Cart</button>
+        <a href="/buy now form/buy now.html"> <button class="buy-btn">Buy Now</button></a>
+    </div>   
+</div>
+</div>    
+
+<!--  -->
+<div class="disclaimer" style="font-size: medium; padding-top: 100px;">
+    <p>Disclaimer: Actual product color may vary slightly from the image.</p>
+</div>
+<!--  -->
+
+<script>
+    let bigImg = document.querySelector('.big-img img');
+    function showImg(pic){
+        bigImg.src = pic;
+    }
+</script>
+</section>
+
+
+</body>
+</html>
