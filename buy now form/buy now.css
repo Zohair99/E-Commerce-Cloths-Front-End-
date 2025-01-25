@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color:#faf2f2;
+}
+/* HEADER */
+header{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-image: linear-gradient(rgb(211, 129, 48),rgb(221, 158, 94),rgb(235, 194, 153),rgb(235, 194, 153),rgb(221, 158, 94),rgb(211, 129, 48));
+    opacity: 86%;
+    /* position: fixed; */
+    z-index: 1000;
+}
+.logo img{
+    max-width: 70px;
+    height: auto;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+
+}
+.navmenu{
+    display: flex;
+}
+
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+}
+.navmenu ul{
+    background: transparent;
+    list-style: none;
+    width: 100%;
+}
+.navmenu li{
+    float: left;
+    position: relative;
+    width: auto;
+}
+.navmenu a:hover{
+    color: #ee1c47;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover{
+    transition: scale(1.1);
+    color: #ee1c47;
+}
+/* menu */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+.slide{
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    background:rgb(235, 194, 153);
+    padding-bottom: px;
+    transition: 0.5s ease;
+    transform: translateX(500px);
+}
+.slide h1{
+    color:#281201;
+    font-weight: 700;
+    font-size: medium;
+    text-align: center;
+    padding: 10px 0;
+    padding-left: 50px;
+    padding-right: 30px;
+    pointer-events: none;
+}
+.slide ul li{
+    list-style: none;
+    background-color: rgb(254, 254, 254);
+}
+.slide ul li:hover a{
+    color: #fff;
+    background-color: rgb(211, 129, 48);
+}
+.slide ul li a{
+    color: #000206;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.slide ul li a i{
+    width: 40px;
+    text-align: center;
+}
+.slid input{
+    display: none;
+    visibility: hidden;
+   /* -webkit-appearance: none; */
+}
+.toggle{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 0px;
+    left: 2px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: transparent;
+    box-shadow: 0,0,10px rgba(0,0,0,0.3);
+}
+.toggle .common{
+    position: absolute;
+    height: 2.5px;
+    width: 25px;
+    background-color: #000000;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+}
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translate(20px);
+}
+input:checked ~ .slide{
+    transform: translateX(-18px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+
+/* submenu */
+
+#submenu{
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+    border-radius: 30px;
+}
+li:hover ul#submenu{
+    opacity: 1;
+    top: 36px;
+    width: 180px;
+    visibility: visible;
+}
+#submenu li{
+    float: none;
+    width: 100%;
+}
+#submenu a:hover{
+    background: white;
+}
+#submenu a{
+    background: wheat;
+
+}
+/*sub-menu-2  */
+.sub-menu-2{
+    display: none;
+    border-radius: 10px;
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -42px;
+    margin-left: 180px;
+    background-image: linear-gradient(#b3a191,rgb(75, 62, 49));
+    background: white;
+    border-radius: 10px;
+    top: 42px;
+    width: 130px;
+    text-align: center;
+}
+.hover-me i{
+    float: right;
+}
+
+/* search box */
+
+.box{
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+}
+.box:hover input{
+    width: 200px;
+    height: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0 , 0.3);
+    border-radius: 30px;
+    align-items: center;
+    padding: 15px;
+
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .i{
+    font-size: 18px;
+    text-align: right;
+}
+/* java.js */
+header.sticky{
+    background:rgb(235, 194, 153);
+    padding: 0px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+
+}
+
+
+/*  */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px 15px ;
+    margin: 0px 5px 5px 0px ;
+    width: 100%;
+    min-height: 88vh;
+    background-color:wheat;    
+}
+
+.container form{
+    padding: 20px;
+    width: 700px;
+    background-color: rgb(235, 194, 153);
+    border-radius: 35px;
+    box-shadow: 0 5px rgba(0,0,0,0.1);
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col{
+    flex: 1 1 250px;
+}
+
+.container form .row .col .title{
+    font-size: 25px;
+    color: #603333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .row .col .inputBox span{
+    margin-top: 15px;
+    display: block;
+}
+
+.container form .row .col .inputBox img{
+    margin-top: 3px;
+    margin-bottom: 0px;
+    filter: drop-shadow(0 0 1px black);
+    height: 33px;
+    width: 60px;
+}
+
+.container form .row .col .inputBox input{
+    width: 100%;
+    border-radius: 25px;
+    border: 2px solid #441f01;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+    border: 2px solid black;
+}
+
+.container form .row .col .flex{
+    display: flex;
+    gap: 15px;
+
+}
+
+.container form .row .col .flex .inputBox{
+    margin-top: 5px;
+
+}
+
+.container form .submit-btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background-color: wheat;
+    color: rgb(66, 30, 0);
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+
+.container form .submit-btn:hover{
+    background: #e1a146;
+
+}
